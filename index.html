@@ -4,12 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="frens.css">
-  <title>?</title>
+  <link rel="stylesheet" href="fanalist.css">
+  <title>fanalist</title>
 </head>
 <body>
-  <h1>: ) *  1000</h1>
 
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=2145583972407564&autoLogAppEvents=1" nonce="a2g3KD5Y"></script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '2145583972407564',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v10.0'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+
+</script>
+
+  <h1>fanalist <span>: )</span></h1>
+  <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true"></div>
   <h2>Data</h2>
   <div id="put-data"></div>
 
